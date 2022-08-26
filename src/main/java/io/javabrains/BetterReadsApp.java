@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-public class SpringGitHubLoginApplication {
+public class BetterReadsApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringGitHubLoginApplication.class, args);
+		SpringApplication.run(BetterReadsApp.class, args);
 	}
 
 	@RequestMapping("/user")
 	public String user(@AuthenticationPrincipal OAuth2User principal) {
 		System.out.println(principal);
-		return principal.getAttribute("name");
+		return principal.getAttribute("login");
 	}
 	
 
