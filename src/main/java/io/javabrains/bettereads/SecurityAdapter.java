@@ -1,4 +1,4 @@
-package io.javabrains;
+package io.javabrains.bettereads;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
@@ -15,8 +15,8 @@ public class SecurityAdapter extends WebSecurityConfigurerAdapter {
 		// @formatter:off
 		http
 			.authorizeRequests(a -> a
-				.antMatchers("/", "/error").permitAll()
-				.anyRequest().authenticated()
+				// .antMatchers("/", "/error").permitAll()
+				.anyRequest().permitAll()
 			)
 			.exceptionHandling(e -> e
 				.authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED))
