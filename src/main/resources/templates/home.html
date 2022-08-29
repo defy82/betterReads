@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Better Reads</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+    <base href="/" />
+</head>
+
+<body>
+    <h1>Better Reads</h1>
+    <h1>My Books</p>
+
+        <div class="card" th:each="book: ${books}">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title" th:text="${book.name}">Book Title</h5>
+            </div>
+        </div>
+
+        <!-- <div class="card" style="flex: 0 0 30%;" th:each="result: ${searchResults}">
+            <img th:src="${result.cover_i}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title" th:text="${result.title}">Book Title</h5>
+                <a href="#" th:href="@{'/books/' + ${result.key}}" class="btn btn-primary">View Book</a>
+            </div>
+        </div> -->
+</body>
+
+</html>
